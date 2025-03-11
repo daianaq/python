@@ -1,4 +1,4 @@
-def CalcularPrecoGrama(codigoProduto):
+def calcular_preco_grama(codigoProduto):
     if 1 <= codigoProduto <= 4:
         return 10
     elif 5 <= codigoProduto <= 7:
@@ -8,7 +8,7 @@ def CalcularPrecoGrama(codigoProduto):
     else:
         return 0
 
-def calcularImposto(precoTotal, codigoPais):
+def calcular_imposto(precoTotal, codigoPais):
     if codigoPais == 1:
         return precoTotal * 0.00
     elif codigoPais == 2:
@@ -23,9 +23,9 @@ pesoKg = float(input("Digite o peso do produto em quilos: "))
 codigoPais = int(input("Digite o código do país de origem (1-3): "))
 
 pesoGramas = pesoKg * 1000
-precoGrama = CalcularPrecoGrama(codigoProduto)
+precoGrama = calcular_preco_grama(codigoProduto)
 precoTotal = pesoGramas * precoGrama
-imposto = calcularImposto(precoTotal, codigoPais)
+imposto = calcular_imposto(precoTotal, codigoPais)
 valorTotal = precoTotal + imposto
 
 print(f"Peso do produto em gramas: {pesoGramas:.2f}g")
